@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* div {
+    width: 20px;
+    height: 20px;
+    background: #ddd;
+    margin: 20px;
+    position: relative;
+} */
+
+/* 
+div:hover::after {
+    background: #333;
+    content: attr(acceso);
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: inherit;
+    bottom: 20px;
+} */
+
+/* div:first-child {
+    background: green; 
+}
+
+div:last-child{
+    background: blue;
+} */
+
+
+/* div:first-of-type {
+    background: blue;
+}
+
+div:last-of-type {
+    background: blue;
+} */
+
+/* div:nth-child(2n) {
+    background: blue;
+} */
+/* a:link{
+    color: #000;
+}
+a:visited{
+    color: red;
+}
+a:hover {
+    color: grey;
+}
+a:active {
+    color: yellow;
+} */
+
+/* div:hover {
+    background: red;
+} */
+/* 
+input[type="text"]:focus,
+input[type="password"]:focus{
+    background: blue;
+}
+
+input[type="checkbox"]+div {
+    width: 100px;
+    height: 100px;
+}
+
+input[type="checkbox"]:checked + div {
+    background: black;
+}
+
+button:active {
+    background: #000;
+} */
+
+/* div::after {
+    content: attr(name);
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: red;
+}
+
+div::before{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #000;
+} */
+
+
+.checkbox {
+    width: 200px;
+    height: 100px;
+    background: #ccc;
+    border-radius: 50px;
+}
+
+.checkbox::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 20px;
+    left: 20px;
+    background: #000;
+    border-radius: 50px;
+    transition: .5s all ease-in-out;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    opacity: 0;
+    z-index: 99;
+}
+
+input[type="checkbox"]:checked + .checkbox::before {
+    transform: translateX(100px);
+}
+
+/* input[type="checkbox"]:checked + .checkbox::before {
+    transform: translateX(100px);
+} */
+
+.giro {
+    width: 100px;
+    height: 100px;
+    background: red;
+    animation: 1s animacion linear reverse;
+}
+
+/* .giro:hover {
+    transform: rotateZ(45deg);
+} */
+
+@keyframes animacion {
+    0% {
+        background: #fff;
+    }
+
+    100% {
+        background: #000;
+    }
+}
